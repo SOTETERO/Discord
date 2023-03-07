@@ -1,5 +1,9 @@
 import discord
 from gtts import gTTS
+import os
+
+token = os.environ("token")
+
 class MyClient(discord.Client):
     
     def TTSPlay(self):
@@ -66,4 +70,4 @@ class MyClient(discord.Client):
 intents = discord.Intents.default()
 intents.message_content = True
 client = MyClient(intents=intents)
-client.run('MTAyODU2MzI2MDMwNTMyNjE1MA.GAZrN8.7_MBcsUrQicFX-jlMj0Bw2u9kBvF_4U2DF_OyY')
+client.run(token)
